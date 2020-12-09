@@ -34,8 +34,9 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
         const onScroll = () => {
             if (document.documentElement.scrollTop > 50 && !scrolled) {
                 changeState(true)
-            } else if (document.documentElement.scrollTop <= 50 && scrolled)
+            } else if (document.documentElement.scrollTop <= 50 && scrolled) {
                 changeState(false)
+            }
         }
 
         window.addEventListener("scroll", onScroll)
